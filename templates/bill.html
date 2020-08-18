@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>BILL</h1>
+
+     <table border="1">
+          <tr>
+              <th> NAME OF SERVICE </th>
+              <th> Charges </th>
+         </tr>
+         {% for item in list3 %}
+
+          <tr> 
+            {% if item.name %}   
+            <td> {{ item.name }}</td>
+            <td >{{ item.charges}} </td>
+           {% else %}
+           <th>TOTAL AMOUNT</th>
+           <td >{{ item}} </td>
+           {% endif %}
+          </tr>
+           {% endfor %}
+         </table>
+</body>
+</html>
